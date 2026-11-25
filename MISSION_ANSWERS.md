@@ -81,7 +81,7 @@
 ## Part 3: Cloud Deployment
 
 ### Exercise 3.1 & 3.2: Railway & Render Deployment
-- **Public URL:** `https://production-agent-k5-day14.up.railway.app`
+- **Public URL:** `https://k5-l3a-day14-maituananh-2a202603574-deployment-b-production.up.railway.app`
 - **So sánh `railway.toml` với `render.yaml`:**
   - `railway.toml`: Dùng cú pháp TOML, tập trung cấu hình build (`builder = "DOCKERFILE"`) và deploy runtime (`healthcheckPath = "/health"`, `restartPolicyType = "ON_FAILURE"`). Biến môi trường thường được quản lý trực tiếp qua Railway Dashboard hoặc CLI.
   - `render.yaml`: Dùng cú pháp YAML theo chuẩn Infrastructure as Code (Blueprint), cho phép định nghĩa toàn bộ hạ tầng gồm nhiều services (Web Service, Redis) trong cùng một file, hỗ trợ tạo secret tự động (`generateValue: true`) hoặc đồng bộ biến an toàn (`sync: false`).

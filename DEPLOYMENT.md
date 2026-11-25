@@ -1,28 +1,28 @@
 # Deployment Information
 
 ## Public URL
-https://production-agent-k5-day14.up.railway.app
+https://k5-l3a-day14-maituananh-2a202603574-deployment-b-production.up.railway.app
 
 ## Platform
-Railway (hoặc Render Blueprint)
+Railway
 
 ## Test Commands
 
 ### Health Check
 ```bash
-curl -sS -o /dev/null -w '%{http_code}\n' https://production-agent-k5-day14.up.railway.app/health
+curl -sS -o /dev/null -w '%{http_code}\n' https://k5-l3a-day14-maituananh-2a202603574-deployment-b-production.up.railway.app/health
 # Expected: 200
 ```
 
 ### Readiness Check
 ```bash
-curl -sS -o /dev/null -w '%{http_code}\n' https://production-agent-k5-day14.up.railway.app/ready
+curl -sS -o /dev/null -w '%{http_code}\n' https://k5-l3a-day14-maituananh-2a202603574-deployment-b-production.up.railway.app/ready
 # Expected: 200
 ```
 
 ### API Test (không có API Key — mong đợi 401)
 ```bash
-curl -sS -o /dev/null -w '%{http_code}\n' -X POST https://production-agent-k5-day14.up.railway.app/ask \
+curl -sS -o /dev/null -w '%{http_code}\n' -X POST https://k5-l3a-day14-maituananh-2a202603574-deployment-b-production.up.railway.app/ask \
   -H "Content-Type: application/json" \
   -d '{"question": "Hello"}'
 # Expected: 401
@@ -30,7 +30,7 @@ curl -sS -o /dev/null -w '%{http_code}\n' -X POST https://production-agent-k5-da
 
 ### API Test (có API Key hợp lệ — mong đợi 200)
 ```bash
-curl -sS -o /dev/null -w '%{http_code}\n' -X POST https://production-agent-k5-day14.up.railway.app/ask \
+curl -sS -o /dev/null -w '%{http_code}\n' -X POST https://k5-l3a-day14-maituananh-2a202603574-deployment-b-production.up.railway.app/ask \
   -H "X-API-Key: $AGENT_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"question": "Hello"}'
